@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  background: #0B0B0C;
+}
+
+/* Accessible focus styles */
+:where(a, button, [role="button"], input, textarea, select) {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sand/70 focus-visible:ring-offset-2 focus-visible:ring-offset-black/60 rounded;
+}
+
+/* Skip link */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #F4D7A1;
+  color: #0B0B0C;
+  padding: 8px 12px;
+  z-index: 1000;
+  transition: transform .2s pleasant, opacity .2s pleasant;
+}
+.skip-to-content:focus {
+  top: 8px;
+}
+
+/* Motion safety */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Hide horizontal scrollbar visuals while keeping scrollability */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
