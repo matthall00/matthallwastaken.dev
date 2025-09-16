@@ -43,6 +43,7 @@ const openSource = [
 
 async function getRepoMeta(): Promise<Record<string, { stars?: number; updated?: string }>> {
   const CACHE_DURATION_SECONDS = 60 * 60 * 24; // 24 hours in seconds
+  const REQUEST_TIMEOUT_MS = 5000; // 5 seconds timeout
 
   const map: Record<string, string> = {
     csvdash: "https://api.github.com/repos/matthall00/csv-dashgen",
@@ -50,23 +51,51 @@ async function getRepoMeta(): Promise<Record<string, { stars?: number; updated?:
     wikiscroll: "https://api.github.com/repos/matthall00/wikiscroll",
   };
   const result: Record<string, { stars?: number; updated?: string }> = {};
+
   try {
     const entries = await Promise.all(
       Object.entries(map).map(async ([key, url]) => {
         try {
-          const res = await fetch(url, { next: { revalidate: CACHE_DURATION_SECONDS } });
-          if (!res.ok) return [key, {}] as const;
+          // Create AbortController for timeout handling
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+
+          const res = await fetch(url, {
+            next: { revalidate: CACHE_DURATION_SECONDS },
+            signal: controller.signal
+          });
+
+          clearTimeout(timeoutId);
+
+          if (!res.ok) {
+            console.warn(`GitHub API request failed for ${key}: ${res.status} ${res.statusText}`);
+            return [key, {}] as const;
+          }
+
           const json = await res.json();
           const stars = json.stargazers_count as number | undefined;
           const updated = json.updated_at ? new Date(json.updated_at).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" }) : undefined;
           return [key, { stars, updated }] as const;
-        } catch {
+        } catch (error) {
+          if (error instanceof Error) {
+            if (error.name === 'AbortError') {
+              console.warn(`GitHub API request timed out for ${key}`);
+            } else {
+              console.warn(`GitHub API request failed for ${key}:`, error.message);
+            }
+          } else {
+            console.warn(`Unknown error fetching GitHub data for ${key}`);
+          }
           return [key, {}] as const;
         }
       })
     );
     for (const [k, v] of entries) result[k] = v;
-  } catch {}
+  } catch (error) {
+    console.error('Failed to fetch GitHub repository metadata:', error);
+    // Return empty result to prevent blocking page render
+  }
+
   return result;
 }
 
