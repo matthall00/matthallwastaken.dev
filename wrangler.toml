@@ -1,4 +1,5 @@
-name = "matthallwastaken-dev"
+# wrangler.toml
+name = 'matt-hall-portfolio'
 
 # Deploy Next.js to Cloudflare Pages using next-on-pages output
 pages_build_output_dir = ".vercel/output"
