@@ -10,12 +10,16 @@ export default function Header() {
         Skip to content
       </a>
       <Container>
-        <div className="flex items-center gap-6 py-3">
+        <div className="flex items-center gap-4 sm:gap-6 py-3">
           <Link href="/" className="flex items-center gap-2 font-semibold tracking-tight">
             <Icon name="logo" className="h-5 w-5" />
             <span>matthallwastaken.dev</span>
           </Link>
-          <nav className="ml-auto flex gap-2" aria-label="Primary">
+          {/* On small screens, enable horizontal scrolling for the nav */}
+          <nav
+            className="ml-auto flex gap-2 max-w-full overflow-x-auto whitespace-nowrap sm:overflow-visible"
+            aria-label="Primary"
+          >
             <NavLink href="/projects">Projects</NavLink>
             <NavLink href="/about">About</NavLink>
             <NavLink href="/contact">Contact</NavLink>
@@ -26,4 +30,3 @@ export default function Header() {
     </header>
   );
 }
-
