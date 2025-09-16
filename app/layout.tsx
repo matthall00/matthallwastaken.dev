@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     title: "Matt Hall — Full-stack technologist & product builder",
     description: "Practical tools, clean systems, and slightly better every day.",
     url: "https://matthallwastaken.dev",
+    siteName: "Matt Hall",
     images: ["/og.png"],
   },
   twitter: { card: "summary_large_image" },

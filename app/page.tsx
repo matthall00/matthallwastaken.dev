@@ -37,7 +37,6 @@ export default function Home() {
               <h1 className="text-4xl sm:text-6xl font-bold tracking-tight">Matt Hall</h1>
               <p className="mt-4 text-xl text-white/80">Full-stack technologist & product builder.</p>
               <p className="mt-1 text-sm text-white/60">Yes, the .dev I wanted was taken. We adapt.</p>
-              <p className="mt-1 text-sm text-white/60">Still stubborn enough to ship anyway.</p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <LinkButton href="/projects" variant="primary">View Projects</LinkButton>
                 <LinkButton href="/resume">Get Resume</LinkButton>
