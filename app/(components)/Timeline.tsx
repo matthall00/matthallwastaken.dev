@@ -21,6 +21,10 @@ export default function Timeline({ items }: { items: TimelineItem[] }) {
     return false;
   });
 
+  // Extract complex className strings for better readability
+  const scrollerClassName = "relative overflow-x-auto no-scrollbar snap-x snap-mandatory px-2 -mx-4 lg:-mx-6 xl:overflow-x-visible";
+  const timelineGridClassName = "grid grid-flow-col auto-cols-[minmax(320px,380px)] gap-6 pr-8 sm:auto-cols-[minmax(340px,420px)] lg:auto-cols-[minmax(360px,440px)] xl:grid-flow-row xl:auto-cols-auto xl:grid-cols-[repeat(auto-fit,minmax(360px,1fr))]";
+
   useEffect(() => {
     if (typeof window === "undefined" || !window.matchMedia) return;
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -84,9 +88,9 @@ export default function Timeline({ items }: { items: TimelineItem[] }) {
         ref={scrollerRef}
         tabIndex={0}
         onKeyDown={onKeyDown}
-        className="relative overflow-x-auto no-scrollbar snap-x snap-mandatory px-2 -mx-4 lg:-mx-6 xl:overflow-x-visible"
+        className={scrollerClassName}
       >
-        <ul className="grid grid-flow-col auto-cols-[minmax(320px,380px)] gap-6 pr-8 sm:auto-cols-[minmax(340px,420px)] lg:auto-cols-[minmax(360px,440px)] xl:grid-flow-row xl:auto-cols-auto xl:grid-cols-[repeat(auto-fit,minmax(360px,1fr))]">
+        <ul className={timelineGridClassName}>
           {items.map((item) => (
             <li key={item.title} className="snap-start">
               <article aria-label={`${item.dateRange}: ${item.title}`} className="rounded-xl border border-white/10 bg-white/[0.03] p-4 min-h-[220px] flex flex-col">
