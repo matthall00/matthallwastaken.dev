@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Container from "./Container";
 import NavLink from "./NavLink";
 import Icon from "./Icon";
@@ -7,6 +7,24 @@ import Link from "next/link";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  // Close on Escape and lock body scroll when open
+  useEffect(() => {
+    function onKeydown(e: KeyboardEvent) {
+      if (e.key === "Escape") setOpen(false);
+    }
+    window.addEventListener("keydown", onKeydown);
+    // Lock scroll on body while menu is open
+    const originalOverflow = document.body.style.overflow;
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = originalOverflow || "";
+    }
+    return () => {
+      window.removeEventListener("keydown", onKeydown);
+      document.body.style.overflow = originalOverflow || "";
+    };
+  }, [open]);
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 backdrop-blur bg-black/30">
       <a href="#content" className="skip-to-content sr-only focus:not-sr-only">
@@ -49,14 +67,30 @@ export default function Header() {
           </div>
         </div>
       </Container>
+      {/* Backdrop for mobile menu */}
+      <button
+        type="button"
+        aria-hidden
+        tabIndex={-1}
+        onClick={() => setOpen(false)}
+        className={`sm:hidden fixed inset-0 z-40 bg-black/50 backdrop-blur-[1px] transition-opacity ${
+          open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+      />
       {/* Mobile slide-down panel */}
       <div
         id="primary-navigation"
-        className={`sm:hidden overflow-hidden transition-all duration-200 ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}
+        className={`sm:hidden overflow-hidden transition-all duration-200 z-50 relative ${
+          open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
         aria-label="Primary"
       >
         <Container className="pb-3">
-          <div className="flex flex-col gap-1 pt-1">
+          <div
+            className={`flex flex-col gap-1 pt-1 transform transition-transform duration-200 ${
+              open ? "translate-y-0" : "-translate-y-1"
+            }`}
+          >
             <NavLink href="/projects" onClick={() => setOpen(false)}>
               Projects
             </NavLink>
