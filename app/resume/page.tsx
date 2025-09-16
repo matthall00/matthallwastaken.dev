@@ -1,8 +1,6 @@
 import Container from "../(components)/Container";
 import Section from "../(components)/Section";
 import Badge from "../(components)/Badge";
-import fs from "node:fs";
-import path from "node:path";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -18,12 +16,7 @@ export const metadata: Metadata = {
 export const dynamic = "force-static";
 
 export default function ResumePage() {
-  const pdfPath = path.join(process.cwd(), "public", "resume.pdf");
-  let lastUpdated: string | null = null;
-  try {
-    const stat = fs.statSync(pdfPath);
-    lastUpdated = new Date(stat.mtime).toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
-  } catch {}
+  let lastUpdated: string | null = process.env.NEXT_PUBLIC_RESUME_UPDATED || null;
   return (
     <Section>
       <Container>

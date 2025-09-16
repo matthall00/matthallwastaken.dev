@@ -1,4 +1,5 @@
-name = "matthallwastaken-dev"
+# wrangler.toml
+name = 'matt-hall-portfolio'
 
 # Deploy Next.js to Cloudflare Pages using next-on-pages output
 pages_build_output_dir = ".vercel/output"
@@ -9,6 +10,4 @@ pages_build_output_dir = ".vercel/output"
 # Optionally, define env vars for local pages dev
 [vars]
 NEXT_PUBLIC_UMAMI_SRC = "https://umami.slightlybetter.dev/fetch.js"
-# Set your real website ID locally or via the Pages dashboard:
 NEXT_PUBLIC_UMAMI_WEBSITE_ID = "0026123c-1418-4a9c-b43c-5b78386a1597"
-
