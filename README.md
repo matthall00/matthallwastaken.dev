@@ -47,10 +47,9 @@ Scripts:
 - Deploy: `npm run cf:deploy` (requires a Pages project; update `--project-name` in `package.json`)
 
 Setup steps:
-1) Install deps: `npm i -D @cloudflare/next-on-pages wrangler`
-2) Login: `npx wrangler login`
-3) Create a Pages project in the dashboard (or via `wrangler pages project create`).
-4) Build + deploy: `npm run cf:build && npm run cf:deploy`
+1) Login: `npx wrangler login`
+2) Create a Pages project in the dashboard (or via `npx wrangler pages project create`).
+3) Build + deploy: `npm run cf:build && npm run cf:deploy`
 
 Environment variables (Pages → Settings → Environment variables):
 - `NEXT_PUBLIC_UMAMI_WEBSITE_ID`: your Umami Website ID
