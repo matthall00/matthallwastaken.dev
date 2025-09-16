@@ -3,12 +3,8 @@ export type IconName = "logo" | "github" | "linkedin" | "external" | "mail";
 export default function Icon({ name, className = "w-4 h-4" }: { name: IconName; className?: string }) {
   switch (name) {
     case "logo":
-      return (
-        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" className={className} aria-hidden>
-          <rect x="2" y="2" width="28" height="28" rx="6" fill="#F4D7A1" />
-          <path d="M9 22l5-12 5 12" stroke="#0B0B0C" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      );
+      // Use the public/logo.svg asset for the logo to ensure consistency
+      return <img src="/logo.svg" alt="" aria-hidden className={className} />;
     case "github":
       return (
         <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden>
@@ -38,4 +34,3 @@ export default function Icon({ name, className = "w-4 h-4" }: { name: IconName; 
       );
   }
 }
-

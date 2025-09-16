@@ -1,5 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Site logo">
-  <rect x="8" y="8" width="112" height="112" rx="16" fill="#F4D7A1"/>
-  <path d="M40 92 L64 36 L88 92" stroke="#0B0B0C" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1024" height="768" viewBox="0 0 1024 768" xml:space="preserve">
+<desc>Created with Fabric.js 6.5.3</desc>
+<defs>
+</defs>
 
+<g transform="matrix(7.5216 0 0 7.5216 512 384)" id="glyphGroup_textPair_1758005956104_0.7020600420008811">
+<g style="">
+		<g transform="matrix(1 0 0 1 -24.552 0)">
+<g style="">
+		<g transform="matrix(1 0 0 1 0 0)">
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,229,198); fill-rule: nonzero; opacity: 1;" transform=" translate(-100, -98.1288)" d="M 86.356 73.6488 L 100.036 107.1288 L 113.644 73.6488 L 123.076 73.6488 L 123.076 122.6088 L 114.796 122.6088 L 114.796 103.8888 L 115.876 86.7528 L 103.708 116.8488 L 96.004 116.8488 L 84.124 86.6808 L 85.204 103.8888 L 85.204 122.6088 L 76.924 122.6088 L 76.924 73.6488 Z" stroke-linecap="round"/>
+</g>
+</g>
+</g>
+		<g transform="matrix(1 0 0 1 29.844 0)">
+<g style="">
+		<g transform="matrix(1 0 0 1 0 0)">
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(188,41,69); fill-rule: nonzero; opacity: 1;" transform=" translate(-100, -98.1288)" d="M 109.144 122.6088 L 109.144 101.9448 L 90.856 101.9448 L 90.856 122.6088 L 82.216 122.6088 L 82.216 73.6488 L 90.856 73.6488 L 90.856 93.6648 L 109.144 93.6648 L 109.144 73.6488 L 117.784 73.6488 L 117.784 122.6088 Z" stroke-linecap="round"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<g transform="matrix(7.5216 0 0 7.5216 512 384)" style="" id="iText_textPair_1758005956104_0.7020600420008811">
+		<text xml:space="preserve" font-family="Inria-Sans" font-size="72" font-style="normal" font-weight="700" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-opacity: 0; fill-rule: nonzero; opacity: 1; white-space: pre;"><tspan x="-61.488" y="22.6181">MH</tspan></text>
+</g>
+</svg>
