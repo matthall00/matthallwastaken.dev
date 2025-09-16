@@ -31,10 +31,8 @@ A small, fast Next.js App Router site with Tailwind CSS. Dark theme with a warm 
 - Semantic headings and nav landmarks
 
 ## Analytics (optional)
-- Set `NEXT_PUBLIC_ANALYTICS_ID` to enable lightweight analytics:
-  - Cloudflare Web Analytics: set to your beacon token; a small beacon script is injected.
-  - PostHog: set to your public token (starts with `phc_`); page views are captured with `posthog-js`.
-- If unset, no analytics are loaded and rendering is unaffected.
+- Umami (self-hosted): set `NEXT_PUBLIC_UMAMI_WEBSITE_ID` and optionally `NEXT_PUBLIC_UMAMI_SRC` (defaults to `https://umami.slightlybetter.dev/fetch.js`). The script loads after interactive and does not block rendering.
+- If unset, no analytics are loaded.
 
 ## Cloudflare Pages
 See `cloudflare-pages.md` for recommended settings and headers.
@@ -42,4 +40,3 @@ See `cloudflare-pages.md` for recommended settings and headers.
 ## Notes
 - `public/og.png` and `public/favicon.ico` are placeholders — replace with real assets.
 - `public/resume.pdf` is a minimal placeholder PDF — replace with your resume.
-

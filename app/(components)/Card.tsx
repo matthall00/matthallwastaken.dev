@@ -37,17 +37,9 @@ export default function Card({
     // Only send telemetry if enough time has passed since last click on this href
     if (timeSinceLastClick >= TELEMETRY_DEBOUNCE_MS) {
       lastClickTimesRef.current.set(a.href, now);
-
       try {
-        // Basic outbound click telemetry if PostHog present
-        (window as any)?.posthog?.capture?.("outbound_link_click", { label: a.label, href: a.href });
-        // Lightweight local beacon
-        fetch("/api/telemetry", {
-          method: "POST",
-          headers: { "content-type": "application/json" },
-          body: JSON.stringify({ event: "outbound_link_click", category: "Projects", label: a.label, href: a.href }),
-          keepalive: true,
-        }).catch(() => {});
+        // Umami event attribute can be used, but for safety also call if available
+        (window as any)?.umami?.track?.("Projects Outbound", { label: a.label, href: a.href });
       } catch {}
     }
     // Always allow navigation to proceed
@@ -79,6 +71,8 @@ export default function Card({
                 href={a.disabled ? undefined : a.href}
                 aria-disabled={a.disabled}
                 title={a.disabled ? "Coming soon" : undefined}
+                data-umami-event="Projects Outbound"
+                data-umami-event-label={a.label}
                 onClick={(event) => handleActionClick(a, event)}
                 className={`inline-flex items-center gap-2 rounded-xl px-3 py-2 text-sm ring-1 ring-white/15 hover:bg-white/5 transition ${
                   a.disabled ? "pointer-events-none opacity-50" : ""

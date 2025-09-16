@@ -3,8 +3,7 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import Header from "./(components)/Header";
 import Footer from "./(components)/Footer";
-import Analytics from "./(components)/Analytics";
-import React from "react";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
@@ -33,10 +32,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main id="content" className="flex-1">{children}</main>
         <Footer />
-        {/* Optional analytics; does nothing without NEXT_PUBLIC_ANALYTICS_ID */}
-        <React.Suspense fallback={null}>
-          <Analytics />
-        </React.Suspense>
+        {/* Umami analytics: enabled only if NEXT_PUBLIC_UMAMI_WEBSITE_ID is set */}
+        {process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID ? (
+          <Script
+            id="umami"
+            defer
+            src={process.env.NEXT_PUBLIC_UMAMI_SRC || "https://umami.slightlybetter.dev/fetch.js"}
+            data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
+          />
+        ) : null}
       </body>
     </html>
   );
