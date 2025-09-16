@@ -1,5 +1,6 @@
 import Container from "../(components)/Container";
 import Section from "../(components)/Section";
+import Badge from "../(components)/Badge";
 import fs from "node:fs";
 import path from "node:path";
 import type { Metadata } from "next";
@@ -48,7 +49,7 @@ export default function ResumePage() {
             <div className="text-xs uppercase tracking-wide text-white/50">Advanced</div>
             <div className="mt-2 flex flex-wrap gap-2">
               {["React","TypeScript","Node.js","MySQL","PHP"].map((s)=> (
-                <span key={s} className="inline-flex items-center rounded-full bg-white/10 text-white/80 ring-1 ring-white/15 px-2.5 py-1 text-xs">{s}</span>
+                <Badge key={s}>{s}</Badge>
               ))}
             </div>
           </div>
@@ -56,7 +57,7 @@ export default function ResumePage() {
             <div className="text-xs uppercase tracking-wide text-white/50">Intermediate</div>
             <div className="mt-2 flex flex-wrap gap-2">
               {["Laravel","Prisma","Postgres","Cloudflare Workers","Hono","Docker","Tailwind"].map((s)=> (
-                <span key={s} className="inline-flex items-center rounded-full bg-white/10 text-white/80 ring-1 ring-white/15 px-2.5 py-1 text-xs">{s}</span>
+                <Badge key={s}>{s}</Badge>
               ))}
             </div>
           </div>
