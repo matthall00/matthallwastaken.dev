@@ -4,6 +4,15 @@ import { useRef, useCallback } from "react";
 
 type Action = { label: string; href: string; disabled?: boolean };
 
+// Type declaration for Umami analytics
+interface Umami {
+  track: (event: string, data?: Record<string, any>) => void;
+}
+
+interface WindowWithUmami extends Window {
+  umami?: Umami;
+}
+
 export default function Card({
   title,
   description,
@@ -39,7 +48,7 @@ export default function Card({
       lastClickTimesRef.current.set(a.href, now);
       try {
         // Umami event attribute can be used, but for safety also call if available
-        (window as any)?.umami?.track?.("Projects Outbound", { label: a.label, href: a.href });
+        (window as WindowWithUmami)?.umami?.track?.("Projects Outbound", { label: a.label, href: a.href });
       } catch {}
     }
     // Always allow navigation to proceed
