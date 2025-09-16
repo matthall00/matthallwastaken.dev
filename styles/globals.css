@@ -57,3 +57,61 @@ html {
   scrollbar-width: none;
   /* Firefox */
 }
+
+/* Timeline component styles */
+.timeline-scroller {
+  position: relative;
+  overflow-x: auto;
+  scrollbar-width: none;
+  /* Firefox */
+  scroll-snap-type: x mandatory;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.timeline-scroller::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .timeline-scroller {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .timeline-scroller {
+    overflow-x: visible;
+  }
+}
+
+.timeline-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(320px, 380px);
+  gap: 1.5rem;
+  padding-right: 2rem;
+}
+
+@media (min-width: 640px) {
+  .timeline-grid {
+    grid-auto-columns: minmax(340px, 420px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .timeline-grid {
+    grid-auto-columns: minmax(360px, 440px);
+  }
+}
+
+@media (min-width: 1280px) {
+  .timeline-grid {
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  }
+}

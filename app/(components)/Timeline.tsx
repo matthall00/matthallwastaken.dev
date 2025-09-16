@@ -22,9 +22,8 @@ export default function Timeline({ items }: { items: TimelineItem[] }) {
   });
 
   // Extract complex className strings for better readability
-  const scrollerClassName = "relative overflow-x-auto no-scrollbar snap-x snap-mandatory px-2 -mx-4 lg:-mx-6 xl:overflow-x-visible";
-  const timelineGridClassName = "grid grid-flow-col auto-cols-[minmax(320px,380px)] gap-6 pr-8 sm:auto-cols-[minmax(340px,420px)] lg:auto-cols-[minmax(360px,440px)] xl:grid-flow-row xl:auto-cols-auto xl:grid-cols-[repeat(auto-fit,minmax(360px,1fr))]";
-
+  const scrollerClassName = "timeline-scroller";
+  const timelineGridClassName = "timeline-grid";
   useEffect(() => {
     if (typeof window === "undefined" || !window.matchMedia) return;
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
