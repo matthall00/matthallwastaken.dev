@@ -2,7 +2,7 @@
 name = 'matt-hall-portfolio'
 
 # Deploy Next.js to Cloudflare Pages using next-on-pages output
-pages_build_output_dir = ".vercel/output"
+pages_build_output_dir = ".vercel/output/static"
 
 # Use Pages deployments (wrangler pages ...) so account/project is picked at deploy time
 # compatibility_date is not required for Pages static/function routing when using next-on-pages
