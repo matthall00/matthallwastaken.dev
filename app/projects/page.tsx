@@ -23,18 +23,21 @@ const openSource = [
     blurb: "Transforms CSV files into interactive dashboards with automatic analysis and visualizations.",
     tags: ["React", "Vite", "Tailwind", "Privacy-first"],
     links: [{ label: "Repo", href: "https://github.com/matthall00/csv-dashgen" }],
+    metaKey: "csvdash",
   },
   {
     title: "Habit Harbor (PWA)",
     blurb: "Minimalist offline-first habit tracker that installs to your home screen and syncs when online.",
     tags: ["PWA", "Service Worker", "Offline-first", "Sync"],
     links: [{ label: "Repo", href: "https://github.com/matthall00/habit-harbor-pwa" }],
+    metaKey: "habitharbor",
   },
   {
     title: "Wikiscroll",
     blurb: "A playful experiment for continuous Wikipedia scrolling and serendipitous discovery.",
     tags: ["React", "API", "Experiment"],
     links: [{ label: "Repo", href: "https://github.com/matthall00/wikiscroll" }],
+    metaKey: "wikiscroll",
   },
 ];
 
@@ -78,14 +81,7 @@ export default async function ProjectsPage() {
         <h2 className="mt-10 text-xl font-semibold">Open Source & Experiments</h2>
         <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
           {openSource.map((p) => {
-            const m =
-              p.title === "CSV DashGen"
-                ? meta.csvdash
-                : p.title.startsWith("Habit Harbor")
-                ? meta.habitharbor
-                : p.title === "Wikiscroll"
-                ? meta.wikiscroll
-                : undefined;
+            const m = p.metaKey ? meta[p.metaKey] : undefined;
             const foot = m && (m.stars || m.updated)
               ? `${m.stars ? `★ ${m.stars} stars` : ""}${m.stars && m.updated ? " • " : ""}${m.updated ? `updated ${m.updated}` : ""}`
               : undefined;
