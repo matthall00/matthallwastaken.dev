@@ -1,6 +1,7 @@
 import Container from "./Container";
 import NavLink from "./NavLink";
 import Icon from "./Icon";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -10,10 +11,10 @@ export default function Header() {
       </a>
       <Container>
         <div className="flex items-center gap-6 py-3">
-          <a href="/" className="flex items-center gap-2 font-semibold tracking-tight">
+          <Link href="/" className="flex items-center gap-2 font-semibold tracking-tight">
             <Icon name="logo" className="h-5 w-5" />
             <span>matthallwastaken.dev</span>
-          </a>
+          </Link>
           <nav className="ml-auto flex gap-2" aria-label="Primary">
             <NavLink href="/projects">Projects</NavLink>
             <NavLink href="/about">About</NavLink>
