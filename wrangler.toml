@@ -1,11 +1,12 @@
 # wrangler.toml
 name = 'matt-hall-portfolio'
 
-# Deploy Next.js to Cloudflare Pages using next-on-pages output
-pages_build_output_dir = ".vercel/output/static"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
 
-# Use Pages deployments (wrangler pages ...) so account/project is picked at deploy time
-# compatibility_date is not required for Pages static/function routing when using next-on-pages
+[build]
+command = "npx @cloudflare/next-on-pages@latest"
+pages_build_output_dir = ".vercel/output/static"
 
 # Optionally, define env vars for local pages dev
 [vars]
