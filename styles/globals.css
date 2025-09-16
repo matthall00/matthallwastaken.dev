@@ -4,6 +4,7 @@
 
 :root {
   color-scheme: dark;
+  --timing-pleasant: cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
 html {
@@ -24,8 +25,9 @@ html {
   color: #0B0B0C;
   padding: 8px 12px;
   z-index: 1000;
-  transition: transform .2s pleasant, opacity .2s pleasant;
+  transition: transform .2s var(--timing-pleasant), opacity .2s var(--timing-pleasant);
 }
+
 .skip-to-content:focus {
   top: 8px;
 }
@@ -44,7 +46,10 @@ html {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 .no-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }

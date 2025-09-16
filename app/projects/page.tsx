@@ -39,6 +39,8 @@ const openSource = [
 ];
 
 async function getRepoMeta(): Promise<Record<string, { stars?: number; updated?: string }>> {
+  const CACHE_DURATION_SECONDS = 60 * 60 * 24; // 24 hours in seconds
+
   const map: Record<string, string> = {
     csvdash: "https://api.github.com/repos/matthall00/csv-dashgen",
     habitharbor: "https://api.github.com/repos/matthall00/habit-harbor-pwa",
@@ -49,7 +51,7 @@ async function getRepoMeta(): Promise<Record<string, { stars?: number; updated?:
     const entries = await Promise.all(
       Object.entries(map).map(async ([key, url]) => {
         try {
-          const res = await fetch(url, { next: { revalidate: 60 * 60 * 24 } });
+          const res = await fetch(url, { next: { revalidate: CACHE_DURATION_SECONDS } });
           if (!res.ok) return [key, {}] as const;
           const json = await res.json();
           const stars = json.stargazers_count as number | undefined;

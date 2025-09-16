@@ -14,14 +14,33 @@ export default function Timeline({ items }: { items: TimelineItem[] }) {
   const scrollerRef = useRef<HTMLDivElement | null>(null);
   const [canPrev, setCanPrev] = useState(false);
   const [canNext, setCanNext] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState<boolean>(() => {
+    if (typeof window !== "undefined" && window.matchMedia) {
+      return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    }
+    return false;
+  });
+
+  useEffect(() => {
+    if (typeof window === "undefined" || !window.matchMedia) return;
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const handler = (event: MediaQueryListEvent) => {
+      setPrefersReducedMotion(event.matches);
+    };
+    // Set initial value in case it changed after mount
+    setPrefersReducedMotion(mediaQuery.matches);
+    mediaQuery.addEventListener("change", handler);
+    return () => {
+      mediaQuery.removeEventListener("change", handler);
+    };
+  }, []);
 
   const scrollBy = useCallback((dir: 1 | -1) => {
     const el = scrollerRef.current;
     if (!el) return;
     const delta = el.clientWidth * 0.9 * dir;
-    const reduce = typeof window !== "undefined" && window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    el.scrollBy({ left: delta, behavior: reduce ? "auto" : "smooth" });
-  }, []);
+    el.scrollBy({ left: delta, behavior: prefersReducedMotion ? "auto" : "smooth" });
+  }, [prefersReducedMotion]);
 
   const onKeyDown = useCallback((e: React.KeyboardEvent<HTMLDivElement>) => {
     if (e.key === "ArrowRight") {

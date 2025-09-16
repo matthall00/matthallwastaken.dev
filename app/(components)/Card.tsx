@@ -50,8 +50,7 @@ export default function Card({
                 onClick={() => {
                   try {
                     // Basic outbound click telemetry if PostHog present
-                    // @ts-ignore
-                    window?.posthog?.capture?.("outbound_link_click", { label: a.label, href: a.href });
+                    (window as any)?.posthog?.capture?.("outbound_link_click", { label: a.label, href: a.href });
                     // Lightweight local beacon
                     fetch("/api/telemetry", {
                       method: "POST",
