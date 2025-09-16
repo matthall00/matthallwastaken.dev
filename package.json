@@ -9,7 +9,7 @@
     "lint": "next lint",
     "cf:build": "npx @cloudflare/next-on-pages@latest",
     "cf:dev": "npx wrangler pages dev ./.vercel/output --port=8788",
-    "cf:deploy": "npx wrangler pages deploy ./.vercel/output --project-name=matthallwastaken-dev"
+    "cf:deploy": "npx wrangler pages deploy ./.vercel/output --project-name=matt-hall-portfolio"
   },
   "dependencies": {
     "lucide-react": "0.453.0",
