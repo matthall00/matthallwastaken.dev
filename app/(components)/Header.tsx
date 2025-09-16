@@ -34,7 +34,6 @@ export default function Header() {
         <div className="flex items-center gap-4 sm:gap-6 py-3">
           <Link href="/" aria-label="Home" className="flex items-center gap-2 font-semibold tracking-tight">
             <Icon name="logo" className="h-5 w-5" />
-            <span className="hidden sm:inline">Matt Hall</span>
           </Link>
           {/* Desktop nav */}
           <nav className="ml-auto hidden sm:flex gap-2" aria-label="Primary">
