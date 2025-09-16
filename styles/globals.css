@@ -14,8 +14,10 @@ html {
 /* Accessible focus styles */
 :where(a, button, [role="button"], input, textarea, select):focus-visible {
   outline: none;
-  border-radius: 0.25rem; /* matches Tailwind's 'rounded' */
-  box-shadow: 0 0 0 2px rgba(244, 215, 161, 0.7), 0 0 0 4px rgba(11, 11, 12, 0.6); /* approximates ring-2 ring-sand/70 ring-offset-2 ring-offset-black/60 */
+  border-radius: 0.25rem;
+  /* matches Tailwind's 'rounded' */
+  box-shadow: 0 0 0 2px rgba(244, 215, 161, 0.7), 0 0 0 4px rgba(11, 11, 12, 0.6);
+  /* approximates ring-2 ring-sand/70 ring-offset-2 ring-offset-black/60 */
 }
 
 /* Skip link */
