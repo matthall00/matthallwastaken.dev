@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Matt H. — Full-stack technologist & product builder",
-  description: "Portfolio of Matt H.. Practical tools, clean systems, and slightly better every day.",
+  description: "Portfolio of Matt H. Practical tools, clean systems, and slightly better every day.",
   openGraph: {
     title: "Matt H. — Full-stack technologist & product builder",
     description: "Practical tools, clean systems, and slightly better every day.",
@@ -36,7 +36,6 @@ export default function Home() {
             <div>
               <h1 className="text-4xl sm:text-6xl font-bold tracking-tight">Matt H.</h1>
               <p className="mt-4 text-xl text-white/80">Full-stack technologist & product builder.</p>
-              <p className="mt-1 text-sm text-white/60">Yes, the .dev I wanted was taken. We adapt.</p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <LinkButton href="/projects" variant="primary">View Projects</LinkButton>
                 <LinkButton href="/resume">Get Resume</LinkButton>

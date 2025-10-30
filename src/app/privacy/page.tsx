@@ -184,7 +184,7 @@ export default function Privacy() {
       {/* Footer */}
       <footer className="border-t px-6 py-8">
         <div className="max-w-6xl mx-auto text-center text-gray-600 dark:text-gray-400">
-          <p>&copy; 2024 Matt H.. All rights reserved.</p>
+          <p>&copy; 2024 Matt H. All rights reserved.</p>
           <div className="mt-2">
             <Link href="/privacy" className="hover:underline font-medium">
               Privacy Policy
