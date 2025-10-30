@@ -6,7 +6,7 @@ export default function Headshot() {
   const [loaded, setLoaded] = useState(false);
   return (
     <Image
-      src="/headshot.webp"
+      src="/photo_sm.png"
       alt="Matt H. headshot."
       width={800}
       height={800}
