@@ -29,7 +29,7 @@ export default function ResumePage() {
           </a>
         </div>
         <div className="mt-6 ring-1 ring-white/10 rounded-xl overflow-hidden">
-          <object data="/resume.pdf" type="application/pdf" aria-label="Resume PDF" className="w-full h-[80vh]">
+          <object data={`/resume.pdf?v=${Date.now()}`} type="application/pdf" aria-label="Resume PDF" className="w-full h-[80vh]">
             <div className="p-6 text-white/80">
               <p>PDF viewer blocked or unsupported. You can download the resume instead:</p>
               <p className="mt-4"><a className="underline" href="/resume.pdf">Download resume.pdf</a></p>

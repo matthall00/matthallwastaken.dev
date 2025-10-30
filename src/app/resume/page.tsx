@@ -137,7 +137,7 @@ export default function Resume() {
             <div className="flex flex-col sm:flex-row gap-4 mt-6 md:mt-0">
               <a
                 href="/resume.pdf"
-                download="Matt_Hall_Resume.pdf"
+                download="Matt_H_Resume.pdf"
                 className="bg-foreground text-background px-6 py-3 rounded-lg font-medium hover:opacity-80 transition-opacity text-center"
                 target="_blank"
                 rel="noopener noreferrer"
