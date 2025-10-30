@@ -22,21 +22,21 @@ const openSource = [
     title: "CSV DashGen",
     blurb: "Transforms CSV files into interactive dashboards with automatic analysis and visualizations.",
     tags: ["React", "Vite", "Tailwind", "Privacy-first"],
-    links: [{ label: "Repo", href: "https://github.com/matthall00/csv-dashgen" }],
+    links: [{ label: "Repo", href: "https://github.com/slightlyprivate/csv-dashgen" }],
     metaKey: "csvdash",
   },
   {
     title: "Habit Harbor (PWA)",
     blurb: "Minimalist offline-first habit tracker that installs to your home screen and syncs when online.",
     tags: ["PWA", "Service Worker", "Offline-first", "Sync"],
-    links: [{ label: "Repo", href: "https://github.com/matthall00/habit-harbor-pwa" }],
+    links: [{ label: "Repo", href: "https://github.com/slightlyprivate/habit-harbor-pwa" }],
     metaKey: "habitharbor",
   },
   {
     title: "Wikiscroll",
     blurb: "A playful experiment for continuous Wikipedia scrolling and serendipitous discovery.",
     tags: ["React", "API", "Experiment"],
-    links: [{ label: "Repo", href: "https://github.com/matthall00/wikiscroll" }],
+    links: [{ label: "Repo", href: "https://github.com/slightlyprivate/wikiscroll" }],
     metaKey: "wikiscroll",
   },
 ];
@@ -46,9 +46,9 @@ async function getRepoMeta(): Promise<Record<string, { stars?: number; updated?:
   const REQUEST_TIMEOUT_MS = 5000; // 5 seconds timeout
 
   const map: Record<string, string> = {
-    csvdash: "https://api.github.com/repos/matthall00/csv-dashgen",
-    habitharbor: "https://api.github.com/repos/matthall00/habit-harbor-pwa",
-    wikiscroll: "https://api.github.com/repos/matthall00/wikiscroll",
+    csvdash: "https://api.github.com/repos/slightlyprivate/csv-dashgen",
+    habitharbor: "https://api.github.com/repos/slightlyprivate/habit-harbor-pwa",
+    wikiscroll: "https://api.github.com/repos/slightlyprivate/wikiscroll",
   };
   const result: Record<string, { stars?: number; updated?: string }> = {};
 

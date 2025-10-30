@@ -78,12 +78,12 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold">GitHub</h3>
                     <a
-                      href="https://github.com/matthall00"
+                      href="https://github.com/slightlyprivate"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-600 dark:text-gray-400 hover:text-foreground transition-colors"
                     >
-                      github.com/matthall00
+                      github.com/slightlyprivate
                     </a>
                   </div>
                 </div>

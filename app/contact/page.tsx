@@ -32,7 +32,7 @@ export default function ContactPage() {
             LinkedIn
           </a>
           <a
-            href="https://github.com/matthall00"
+            href="https://github.com/slightlyprivate"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-xl ring-1 ring-white/15 px-4 py-2 hover:bg-white/5"
