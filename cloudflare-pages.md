@@ -25,6 +25,6 @@ Recommended settings for this Next.js site.
 
 ## Notes
 - Pages automatically detects Next.js and serves `.next` output via the adapter.
-- After deploy, set custom domain `matthallwastaken.dev` and redirect `www` to apex.
+- After deploy, set custom domain `whoami.slightlyprivate.com` and redirect `www` to apex.
 - Enable HTTPS and HSTS preload (headers already included).
 

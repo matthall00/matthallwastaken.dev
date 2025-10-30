@@ -20,15 +20,15 @@ export default function Resume() {
   }, []);
 
   const resumeData = {
-    name: "Matt Hall",
+    name: "Matt H.",
     title: "Software Developer",
-    email: "hello@matthallwastaken.dev",
+    email: "contact@slightlyprivate.com",
     phone: "+1 (555) 123-4567",
     location: "San Francisco, CA",
-    website: "matthallwastaken.dev",
-    
+    website: "whoami.slightlyprivate.com",
+
     summary: "Passionate software developer with 5+ years of experience building scalable web applications. Expertise in modern JavaScript frameworks, cloud technologies, and agile development practices.",
-    
+
     experience: [
       {
         title: "Senior Software Developer",
@@ -67,7 +67,7 @@ export default function Resume() {
         ]
       }
     ],
-    
+
     education: [
       {
         degree: "Bachelor of Science in Computer Science",
@@ -76,7 +76,7 @@ export default function Resume() {
         details: "Relevant coursework: Data Structures, Algorithms, Database Systems, Web Development"
       }
     ],
-    
+
     skills: {
       "Programming Languages": ["JavaScript", "TypeScript", "Python", "HTML/CSS"],
       "Frameworks & Libraries": ["React", "Next.js", "Vue.js", "Node.js", "Express"],
@@ -84,7 +84,7 @@ export default function Resume() {
       "Tools & Technologies": ["Git", "Docker", "AWS", "Vercel", "Jest", "GraphQL"],
       "Design": ["Figma", "Adobe Creative Suite", "Responsive Design", "UI/UX"]
     },
-    
+
     projects: [
       {
         name: "E-Commerce Platform",
@@ -105,7 +105,7 @@ export default function Resume() {
       <nav className="px-6 py-4 border-b">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <Link href="/" className="text-xl font-bold">
-            Matt Hall
+            Matt H.
           </Link>
           <div className="flex gap-6">
             <Link href="/projects" className="hover:underline">
@@ -133,7 +133,7 @@ export default function Resume() {
                 Download or view my professional experience
               </p>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 mt-6 md:mt-0">
               <a
                 href="/resume.pdf"
@@ -308,7 +308,7 @@ export default function Resume() {
       {/* Footer */}
       <footer className="border-t px-6 py-8">
         <div className="max-w-6xl mx-auto text-center text-gray-600 dark:text-gray-400">
-          <p>&copy; 2024 Matt Hall. All rights reserved.</p>
+          <p>&copy; 2024 Matt H.. All rights reserved.</p>
           <Link href="/privacy" className="hover:underline mt-2 inline-block">
             Privacy Policy
           </Link>

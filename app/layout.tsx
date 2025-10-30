@@ -9,14 +9,14 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://matthallwastaken.dev"),
-  title: "Matt Hall — Full-stack technologist & product builder",
-  description: "Portfolio of Matt Hall. Practical tools, clean systems, and slightly better every day.",
+  metadataBase: new URL("https://whoami.slightlyprivate.com"),
+  title: "Matt H. — Full-stack technologist & product builder",
+  description: "Portfolio of Matt H.. Practical tools, clean systems, and slightly better every day.",
   openGraph: {
-    title: "Matt Hall — Full-stack technologist & product builder",
+    title: "Matt H. — Full-stack technologist & product builder",
     description: "Practical tools, clean systems, and slightly better every day.",
-    url: "https://matthallwastaken.dev",
-    siteName: "Matt Hall",
+    url: "https://whoami.slightlyprivate.com",
+    siteName: "Matt H.",
     images: ["/og.png"],
   },
   twitter: { card: "summary_large_image" },

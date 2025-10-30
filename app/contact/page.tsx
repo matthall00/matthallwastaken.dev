@@ -4,10 +4,10 @@ import Icon from "../(components)/Icon";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact — Matt Hall",
+  title: "Contact — Matt H.",
   description: "Email works. LinkedIn and GitHub also welcome.",
   openGraph: {
-    title: "Contact — Matt Hall",
+    title: "Contact — Matt H.",
     description: "Email works. LinkedIn and GitHub also welcome.",
   },
   twitter: { card: "summary_large_image" },

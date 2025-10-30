@@ -3,10 +3,10 @@ import Section from "../(components)/Section";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy — Matt Hall",
+  title: "Privacy — Matt H.",
   description: "Minimal analytics, no tracking across sites, no sale of personal data.",
   openGraph: {
-    title: "Privacy — Matt Hall",
+    title: "Privacy — Matt H.",
     description: "Minimal analytics, no tracking across sites, no sale of personal data.",
   },
   twitter: { card: "summary_large_image" },
@@ -25,7 +25,7 @@ export default function PrivacyPage() {
             understand page views and improve this site. No sale of personal data. No tracking pixels across other sites.
           </p>
           <p>
-            Contact me at <a href="mailto:hello@matthallwastaken.dev">hello@matthallwastaken.dev</a> for questions or removal
+            Contact me at <a href="mailto:contact@slightlyprivate.com">contact@slightlyprivate.com</a> for questions or removal
             requests.
           </p>
         </div>

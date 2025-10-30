@@ -52,7 +52,7 @@ export default function Projects() {
       <nav className="px-6 py-4 border-b">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <Link href="/" className="text-xl font-bold">
-            Matt Hall
+            Matt H.
           </Link>
           <div className="flex gap-6">
             <Link href="/projects" className="hover:underline font-medium">
@@ -88,7 +88,7 @@ export default function Projects() {
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
                   {project.description}
                 </p>
-                
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech, techIndex) => (
                     <span
@@ -99,7 +99,7 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
-                
+
                 <div className="flex gap-4">
                   <a
                     href={project.github}
@@ -127,7 +127,7 @@ export default function Projects() {
       {/* Footer */}
       <footer className="border-t px-6 py-8">
         <div className="max-w-6xl mx-auto text-center text-gray-600 dark:text-gray-400">
-          <p>&copy; 2024 Matt Hall. All rights reserved.</p>
+          <p>&copy; 2024 Matt H.. All rights reserved.</p>
           <Link href="/privacy" className="hover:underline mt-2 inline-block">
             Privacy Policy
           </Link>

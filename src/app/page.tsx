@@ -7,7 +7,7 @@ export default function Home() {
       <nav className="px-6 py-4 border-b">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <Link href="/" className="text-xl font-bold">
-            Matt Hall
+            Matt H.
           </Link>
           <div className="flex gap-6">
             <Link href="/projects" className="hover:underline">
@@ -34,10 +34,10 @@ export default function Home() {
               Software Developer
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-10 max-w-3xl mx-auto">
-              Building modern web applications with clean code and thoughtful design. 
+              Building modern web applications with clean code and thoughtful design.
               Passionate about creating solutions that make a difference.
             </p>
-            
+
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">
               <Link
@@ -68,7 +68,7 @@ export default function Home() {
                   Building scalable web applications with modern frameworks and best practices.
                 </p>
               </div>
-              
+
               <div className="text-center p-6">
                 <div className="w-16 h-16 bg-foreground text-background rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
                   🎨
@@ -78,7 +78,7 @@ export default function Home() {
                   Creating intuitive and beautiful user interfaces that enhance user experience.
                 </p>
               </div>
-              
+
               <div className="text-center p-6">
                 <div className="w-16 h-16 bg-foreground text-background rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
                   ⚡
@@ -96,7 +96,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="border-t px-6 py-8">
         <div className="max-w-6xl mx-auto text-center text-gray-600 dark:text-gray-400">
-          <p>&copy; 2024 Matt Hall. All rights reserved.</p>
+          <p>&copy; 2024 Matt H.. All rights reserved.</p>
           <Link href="/privacy" className="hover:underline mt-2 inline-block">
             Privacy Policy
           </Link>

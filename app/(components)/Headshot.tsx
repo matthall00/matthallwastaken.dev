@@ -7,7 +7,7 @@ export default function Headshot() {
   return (
     <Image
       src="/headshot.webp"
-      alt="Matt Hall headshot."
+      alt="Matt H. headshot."
       width={800}
       height={800}
       loading="lazy"

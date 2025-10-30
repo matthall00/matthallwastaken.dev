@@ -7,10 +7,10 @@ import type { Metadata } from "next";
 import Timeline from "../(components)/Timeline";
 
 export const metadata: Metadata = {
-  title: "About — Matt Hall",
+  title: "About — Matt H.",
   description: "I build practical tools that remove friction and hold up when nobody’s watching.",
   openGraph: {
-    title: "About — Matt Hall",
+    title: "About — Matt H.",
     description: "Practical tools, clear trade-offs, honest telemetry, and shipping small improvements.",
   },
   twitter: { card: "summary_large_image" },
@@ -85,7 +85,7 @@ export default function AboutPage() {
         <div className="mt-12">
           <h2 className="text-xl font-semibold">Tech & Tools</h2>
           <div className="mt-4 flex flex-wrap gap-2">
-            {["React","Vite","Hono","Cloudflare Workers","Neon/Postgres","Prisma","Tailwind","Docker","GitHub Actions","PHP","Laravel","MySQL"].map((t)=> (
+            {["React", "Vite", "Hono", "Cloudflare Workers", "Neon/Postgres", "Prisma", "Tailwind", "Docker", "GitHub Actions", "PHP", "Laravel", "MySQL"].map((t) => (
               <Badge key={t}>{t}</Badge>
             ))}
           </div>

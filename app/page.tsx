@@ -6,10 +6,10 @@ import Headshot from "./(components)/Headshot";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Matt Hall — Full-stack technologist & product builder",
-  description: "Portfolio of Matt Hall. Practical tools, clean systems, and slightly better every day.",
+  title: "Matt H. — Full-stack technologist & product builder",
+  description: "Portfolio of Matt H.. Practical tools, clean systems, and slightly better every day.",
   openGraph: {
-    title: "Matt Hall — Full-stack technologist & product builder",
+    title: "Matt H. — Full-stack technologist & product builder",
     description: "Practical tools, clean systems, and slightly better every day.",
   },
   twitter: { card: "summary_large_image" },
@@ -34,7 +34,7 @@ export default function Home() {
         <Container>
           <div className="grid items-center gap-10 lg:gap-12 lg:grid-cols-2">
             <div>
-              <h1 className="text-4xl sm:text-6xl font-bold tracking-tight">Matt Hall</h1>
+              <h1 className="text-4xl sm:text-6xl font-bold tracking-tight">Matt H.</h1>
               <p className="mt-4 text-xl text-white/80">Full-stack technologist & product builder.</p>
               <p className="mt-1 text-sm text-white/60">Yes, the .dev I wanted was taken. We adapt.</p>
               <div className="mt-8 flex flex-wrap gap-3">

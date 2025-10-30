@@ -4,10 +4,10 @@ import Badge from "../(components)/Badge";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Resume — Matt Hall",
+  title: "Resume — Matt H.",
   description: "10+ years shipping dashboards, data tools, and indie SaaS.",
   openGraph: {
-    title: "Resume — Matt Hall",
+    title: "Resume — Matt H.",
     description: "10+ years shipping dashboards, data tools, and indie SaaS.",
   },
   twitter: { card: "summary_large_image" },
@@ -41,7 +41,7 @@ export default function ResumePage() {
           <div className="mt-3">
             <div className="text-xs uppercase tracking-wide text-white/50">Advanced</div>
             <div className="mt-2 flex flex-wrap gap-2">
-              {["React","TypeScript","Node.js","MySQL","PHP"].map((s)=> (
+              {["React", "TypeScript", "Node.js", "MySQL", "PHP"].map((s) => (
                 <Badge key={s}>{s}</Badge>
               ))}
             </div>
@@ -49,7 +49,7 @@ export default function ResumePage() {
           <div className="mt-4">
             <div className="text-xs uppercase tracking-wide text-white/50">Intermediate</div>
             <div className="mt-2 flex flex-wrap gap-2">
-              {["Laravel","Prisma","Postgres","Cloudflare Workers","Hono","Docker","Tailwind"].map((s)=> (
+              {["Laravel", "Prisma", "Postgres", "Cloudflare Workers", "Hono", "Docker", "Tailwind"].map((s) => (
                 <Badge key={s}>{s}</Badge>
               ))}
             </div>

@@ -6,10 +6,10 @@ import { projects } from "@/data/projects";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Projects — Matt Hall",
+  title: "Projects — Matt H.",
   description: "Open source, experiments, and Slightly Better Co. projects.",
   openGraph: {
-    title: "Projects — Matt Hall",
+    title: "Projects — Matt H.",
     description: "Open source, experiments, and Slightly Better Co. projects.",
   },
   twitter: { card: "summary_large_image" },

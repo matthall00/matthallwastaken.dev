@@ -7,7 +7,7 @@ export default function Privacy() {
       <nav className="px-6 py-4 border-b">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <Link href="/" className="text-xl font-bold">
-            Matt Hall
+            Matt H.
           </Link>
           <div className="flex gap-6">
             <Link href="/projects" className="hover:underline">
@@ -37,18 +37,18 @@ export default function Privacy() {
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4">Introduction</h2>
               <p className="text-gray-700 dark:text-gray-300 mb-4">
-                This Privacy Policy describes how matthallwastaken.dev (&quot;I&quot;, &quot;me&quot;, or &quot;my&quot;) 
+                This Privacy Policy describes how slightlyprivate.com (&quot;I&quot;, &quot;me&quot;, or &quot;my&quot;)
                 collects, uses, and protects your information when you visit my website.
               </p>
               <p className="text-gray-700 dark:text-gray-300">
-                I am committed to protecting your privacy and being transparent about how 
+                I am committed to protecting your privacy and being transparent about how
                 I handle your data.
               </p>
             </section>
 
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4">Information I Collect</h2>
-              
+
               <h3 className="text-xl font-semibold mb-3">Information You Provide</h3>
               <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 mb-6 space-y-2">
                 <li>Contact information when you reach out via email</li>
@@ -76,7 +76,7 @@ export default function Privacy() {
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4">Information Sharing</h2>
               <p className="text-gray-700 dark:text-gray-300 mb-4">
-                I do not sell, trade, or rent your personal information to third parties. 
+                I do not sell, trade, or rent your personal information to third parties.
                 I may share information only in the following circumstances:
               </p>
               <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
@@ -90,7 +90,7 @@ export default function Privacy() {
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4">Data Security</h2>
               <p className="text-gray-700 dark:text-gray-300 mb-4">
-                I implement appropriate security measures to protect your information against 
+                I implement appropriate security measures to protect your information against
                 unauthorized access, alteration, disclosure, or destruction. These include:
               </p>
               <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
@@ -148,12 +148,12 @@ export default function Privacy() {
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4">Contact Information</h2>
               <p className="text-gray-700 dark:text-gray-300 mb-4">
-                If you have any questions about this Privacy Policy or how your data is handled, 
+                If you have any questions about this Privacy Policy or how your data is handled,
                 please contact me at:
               </p>
               <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
                 <p className="text-gray-700 dark:text-gray-300">
-                  Email: <a href="mailto:hello@matthallwastaken.dev" className="text-blue-600 dark:text-blue-400 hover:underline">hello@matthallwastaken.dev</a>
+                  Email: <a href="mailto:contact@slightlyprivate.com" className="text-blue-600 dark:text-blue-400 hover:underline">contact@slightlyprivate.com</a>
                 </p>
               </div>
             </section>
@@ -161,8 +161,8 @@ export default function Privacy() {
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4">Changes to This Policy</h2>
               <p className="text-gray-700 dark:text-gray-300">
-                I may update this Privacy Policy from time to time. Any changes will be posted 
-                on this page with an updated &quot;Last updated&quot; date. I encourage you to review 
+                I may update this Privacy Policy from time to time. Any changes will be posted
+                on this page with an updated &quot;Last updated&quot; date. I encourage you to review
                 this policy periodically for any changes.
               </p>
             </section>
@@ -184,7 +184,7 @@ export default function Privacy() {
       {/* Footer */}
       <footer className="border-t px-6 py-8">
         <div className="max-w-6xl mx-auto text-center text-gray-600 dark:text-gray-400">
-          <p>&copy; 2024 Matt Hall. All rights reserved.</p>
+          <p>&copy; 2024 Matt H.. All rights reserved.</p>
           <div className="mt-2">
             <Link href="/privacy" className="hover:underline font-medium">
               Privacy Policy

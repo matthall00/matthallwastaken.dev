@@ -29,7 +29,7 @@ export default function OpengraphImage() {
               gap: 14,
             }}
           >
-            <div style={{ fontSize: 68, fontWeight: 800, letterSpacing: -1 }}>Matt Hall</div>
+            <div style={{ fontSize: 68, fontWeight: 800, letterSpacing: -1 }}>Matt H.</div>
             <div style={{ fontSize: 34, color: "rgba(255,255,255,0.85)" }}>
               Full-stack technologist & product builder
             </div>
@@ -45,7 +45,7 @@ export default function OpengraphImage() {
               backgroundColor: sand,
             }}
           />
-          <div style={{ fontSize: 28, color: "rgba(255,255,255,0.8)" }}>matthallwastaken.dev</div>
+          <div style={{ fontSize: 28, color: "rgba(255,255,255,0.8)" }}>whoami.slightlyprivate.com</div>
         </div>
       </div>
     ),
