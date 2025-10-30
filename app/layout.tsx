@@ -11,7 +11,7 @@ const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
 export const metadata: Metadata = {
   metadataBase: new URL("https://whoami.slightlyprivate.com"),
   title: "Matt H. — Full-stack technologist & product builder",
-  description: "Portfolio of Matt H.. Practical tools, clean systems, and slightly better every day.",
+  description: "Portfolio of Matt H. Practical tools, clean systems, and slightly better every day.",
   openGraph: {
     title: "Matt H. — Full-stack technologist & product builder",
     description: "Practical tools, clean systems, and slightly better every day.",
