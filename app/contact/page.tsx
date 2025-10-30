@@ -20,7 +20,7 @@ export default function ContactPage() {
     <Section>
       <Container>
         <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight">Contact</h1>
-        <p className="mt-4 text-white/80">Email works: <a className="underline hover:text-white" href="mailto:matt@slightlybetter.dev">matt@slightlybetter.dev</a>. I don’t bite.</p>
+        <p className="mt-4 text-white/80">Email works: <a className="underline hover:text-white" href="mailto:contact@slightlyprivate.com">contact@slightlyprivate.com</a>. I don’t bite.</p>
         <div className="mt-6 flex flex-wrap gap-3">
           <a
             href="https://www.linkedin.com/in/slightlyprivate/"
